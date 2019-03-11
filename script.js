@@ -1,22 +1,21 @@
-var idziemyNaPiwo;
-var jestCieplo = false;
-var swieciSlonce = false;
+var x = 2;
 
-if (jestCieplo){
+switch (x) {
 
-    if (swieciSlonce){
+    case 1 :
+    console.log('1 number')
+    break;
 
-        idziemyNaPiwo = true;
+    case '1' :
+    console.log('1 string')
+    break;
 
-    } else {
+    case 2 :
+    console.log(x);
+    break;
 
-        idziemyNaPiwo = false;
-    }
+    default:
+    console.log(0);
+    break;
 
-} else {
-    
-    idziemyNaPiwo = false;
 }
-
-console.log(idziemyNaPiwo);
-
