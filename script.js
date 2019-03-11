@@ -1,21 +1,5 @@
-var x = 2;
+var jestCieplo = false;
 
-switch (x) {
+var idziemyNaPiwo = jestCieplo ? 'Tak huurra' : 'Oh noo'
 
-    case 1 :
-    console.log('1 number')
-    break;
-
-    case '1' :
-    console.log('1 string')
-    break;
-
-    case 2 :
-    console.log(x);
-    break;
-
-    default:
-    console.log(0);
-    break;
-
-}
+console.log(idziemyNaPiwo);
