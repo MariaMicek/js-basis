@@ -9,7 +9,7 @@ console.log(myArray);
 console.log(myObject);
 
 console.log(typeof myString);
-console.log(typeof myNumber);
-console.log(typeof myBoolean);
-console.log(typeof myArray);
-console.log(typeof myObject);
+console.error(typeof myNumber);
+console.warn(typeof myBoolean);
+console.info(typeof myArray);
+console.debug(typeof myObject);
