@@ -1,73 +1,22 @@
-var myString = "Hello";
-var myNumber = 16;
-var myBoolean = true;
-var myArray = ["Marysia", 38, false];
-var myObject = {a: "hello", b: "world", c: 21};
+var idziemyNaPiwo;
+var jestCieplo = false;
+var swieciSlonce = false;
 
-console.log(myString, myNumber, myBoolean);
-console.log(myArray);
-console.log(myObject);
+if (jestCieplo){
 
-console.log(typeof myString);
-console.error(typeof myNumber);
-console.warn(typeof myBoolean);
-console.info(typeof myArray);
-console.debug(typeof myObject);
+    if (swieciSlonce){
 
-var a = 5;
-a += 6;
-console.log(a);
+        idziemyNaPiwo = true;
 
-var b = 2;
-b += b // b = b + b
-b -+ b // b = b - b
+    } else {
 
-var c = 2;
-console.log(c--);   // c - 1 --> 2 najpierw wyświetla, potem odejmuje
-console.log(c);     // c = 1
-console.log(--c);   // c - 1 --> 0  najpierw odejmuje, potem wyświetla
-console.log(c);     // c = 0
-
-//Unary plus
-
-+ 3     // 3
-+ '3'   // 3
-+ true  // 1
-+ false // 0
-+ null  // 0
-+ {}    // NaN
-
-var j = 5;
-var k = '5';
-console.log(j == k);
-console.log(j === k);
-console.log(j != k);
-console.log(j !== k);
-
-console.log(!(j == k));  //false
-console.log(j == !k);   //false
-console.log(!j == k);   //false
-console.log(!j == !k);  //true
-
-var falsy = 0;
-var lub = falsy || 1;
-console.log(lub);
-
-var x = "1";
-
-if (x === 1) {
-
-    console.log(" 1 number");
-
-} else if (x === "1") {         
-
-    console.log("1 string");
-
-} else if (x === 2) {
-
-    console.log(x);
+        idziemyNaPiwo = false;
+    }
 
 } else {
-
-    console.log(0);
+    
+    idziemyNaPiwo = false;
 }
+
+console.log(idziemyNaPiwo);
+
