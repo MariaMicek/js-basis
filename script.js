@@ -48,3 +48,26 @@ console.log(!(j == k));  //false
 console.log(j == !k);   //false
 console.log(!j == k);   //false
 console.log(!j == !k);  //true
+
+var falsy = 0;
+var lub = falsy || 1;
+console.log(lub);
+
+var x = "1";
+
+if (x === 1) {
+
+    console.log(" 1 number");
+
+} else if (x === "1") {         
+
+    console.log("1 string");
+
+} else if (x === 2) {
+
+    console.log(x);
+
+} else {
+
+    console.log(0);
+}
