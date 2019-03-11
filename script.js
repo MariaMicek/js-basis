@@ -36,3 +36,15 @@ console.log(c);     // c = 0
 + false // 0
 + null  // 0
 + {}    // NaN
+
+var j = 5;
+var k = '5';
+console.log(j == k);
+console.log(j === k);
+console.log(j != k);
+console.log(j !== k);
+
+console.log(!(j == k));  //false
+console.log(j == !k);   //false
+console.log(!j == k);   //false
+console.log(!j == !k);  //true
