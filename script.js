@@ -1,15 +1,40 @@
+//do while
+var i = 5;
+
+do {
+    i += 1;
+    console.log(i);
+} while (i < 5); 
+
+
+//10 random numbers, not the same
 var numbers = [];
-for (var i = 0; i < 10; i++) {
-  var myNumber = Math.round((Math.random() * 100) + 1);
-  numbers.push(myNumber);
+
+while (numbers.length < 10){
+    var myNumber = Math.round((Math.random() * 100) + 1);
+    
+    var found = false;
+    for (var i = 1; i < numbers.length; i++){
+        if (myNumber == numbers[i]){
+            found = true;
+        }
+    }
+
+    if(!found) {
+        numbers.push(myNumber);
+        console.log(myNumber)
+    }
+
 }
 
-for (var i = 0; i < numbers.length; i++) {
-    console.log(numbers[i]);
-}
+//version 2
+numbers = [];
 
-console.log("teraz od tyłu");
-
-for (var i = 9; i >= 0; i--){
-    console.log(numbers[i]);
+while (numbers.length < 10){
+    var myNumber = Math.round((Math.random() * 100) + 1);
+    
+    if (!(myNumber in numbers)) {
+        numbers.push(myNumber);
+        console.log(myNumber)
+    }
 }
