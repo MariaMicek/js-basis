@@ -1,26 +1,15 @@
-//tworzenie tablicy z dziesięcioma losowymi liczbami
 var numbers = [];
-for (var i = 0; i < 10; i++){
-    var myNumber = Math.random() * 100 + 1;
-    numbers.push(Math.round(myNumber))
+for (var i = 0; i < 10; i++) {
+  var myNumber = Math.round((Math.random() * 100) + 1);
+  numbers.push(myNumber);
 }
 
-
-//czas z jakim jest wykonywana pętla
-
-console.time('in loop')
-
-for (var i = 0; i < numbers.length; i++){
+for (var i = 0; i < numbers.length; i++) {
     console.log(numbers[i]);
 }
 
-console.timeEnd ('in loop')
+console.log("teraz od tyłu");
 
-console.time('before loop')
-
-var length = numbers.length
-for (var i = 0; i < length; i++){
+for (var i = 9; i >= 0; i--){
     console.log(numbers[i]);
 }
-
-console.timeEnd ('before loop')
