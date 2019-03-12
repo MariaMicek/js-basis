@@ -1,17 +1,12 @@
-//continue and break
-var numbers = [];
+var myArray = [1,2,3,4,5];
 
-while (numbers.length < 10){
+myArray.unshift(0);
+myArray.push(6);
 
-    var myNumber = Math.round((Math.random() * 100) + 1);
+console.log(myArray);
 
-    if (!numbers.includes(myNumber)) {
-        if (myNumber > 20){
-        continue
-        // break
-    }
+var deletedZero = myArray.shift();
+var deletedSix = myArray.pop();
 
-        numbers.push(myNumber);
-        console.log(myNumber);
-    }
-}
+console.log(myArray);
+console.log(deletedZero, deletedSix);
