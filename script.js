@@ -1,12 +1,20 @@
-var myArray = [1,2,3,4,5];
+var myArray = [1,2,3,4,5,6,7,8];
+var newArray = myArray.slice(2,6);
+console.log(newArray);
 
-myArray.unshift(0);
-myArray.push(6);
+var array = [];
+var numbersLength = 12
 
-console.log(myArray);
+for(i = 0; i < numbersLength; i++){
+    var myNumber = Math.round(Math.random() * 100);
+    array.push(myNumber);
+}
 
-var deletedZero = myArray.shift();
-var deletedSix = myArray.pop();
+console.log(array);
 
-console.log(myArray);
-console.log(deletedZero, deletedSix);
+var startIndex = numbersLength / 2 - 2;
+var endIndex = numbersLength / 2 + 2;
+
+var newArray = array.slice(startIndex, endIndex)
+
+console.log(newArray)
