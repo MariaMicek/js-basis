@@ -1,14 +1,10 @@
-//tworzenie tablicy z milionem jedynek
-
-// var numbers = [];
-// for (var i = 0; i < 10000; i++){
-//     numbers.push(1);
-// }
-
+//tworzenie tablicy z dziesięcioma losowymi liczbami
 var numbers = [];
-for (var i = 0; i < 10000; i++){
-    numbers[i] = 1;
+for (var i = 0; i < 10; i++){
+    var myNumber = Math.random() * 100 + 1;
+    numbers.push(Math.round(myNumber))
 }
+
 
 //czas z jakim jest wykonywana pętla
 
