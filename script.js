@@ -1,25 +1,92 @@
-function sumTwoSmallestNums(arr) {
-	var number = [];
-    var sum;
-	var position;
-	var min;
-	var min2;
-	for (i = 0; i < arr.length; i++){
-		
-		if (arr[i] > 0){
-			number.push(arr[i]);
-		}		
+var monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+var months = [];
+var dateStart = new Date(2015, 0, 1);
+var dateEnd = new Date(2015, 1, 1);
+
+function monthsInterval(dateStart, dateEnd) {
+	var start = dateStart.getMonth();		
+	var end = dateEnd.getMonth();			
+	var yearStart = dateStart.getFullYear();
+	var yearEnd = dateEnd.getFullYear();	
+
+	
+	if (yearStart == yearEnd){
+
+			if (start == end){
+
+					months.push(monthNames[start]);
+
+			} else if (start < end){
+
+					for (var i = start; start <= i && i <= end; i++){
+						months.push(monthNames[i]);
+					}
+
+			} else if (start > end){
+
+				for (var i = end; end <= i && i <= start; i++){
+					months.push(monthNames[i]);
+				}
+			}
+
+
+}	else if (yearStart + 1 == yearEnd){
+
+			if (start == end){
+
+				months = monthNames;
+
+			} else if (start < end){
+
+				months = monthNames;
+
+			} else if (start > end){
+
+					for (var i = 0; i >= 0  && i <= end; i++){
+						months.push(monthNames[i]);
+					}
+					for (var i = start; i >= start && i <= 11; i++) {
+						months.push(monthNames[i]);
+					}
+			}
+
+
+} else if (yearStart + 1 < yearEnd){
+
+			months = monthNames;
+
+
+} else if (yearStart - 1 == yearEnd){
+
+			if (start == end){
+
+				months = monthNames;
+
+			} else if (start < end){
+
+					for (var i = 0; i >= 0 && i <= start; i++) {
+						months.push(monthNames[i]);
+					}
+					for (var i = end; i >= end  && i <= 11; i++){
+						months.push(monthNames[i]);
+					}
+
+			} else if (start > end){
+
+						months = monthNames;
+
+			}
+
+
+} else if (yearStart - 1 > yearEnd){
+
+			months = monthNames;
+
 	}
-		min = Math.min(...number); 
-		sum = min;					
-		position = number.indexOf(min);	
-		number.splice(position, 1);
-		min2 = Math.min(...number);
-		sum = sum + min2;
-		return sum;
-		
+
+	return months
+
 }
 
-var arr = [-34,2,-9,-7,64,3,4,43,-5]
 
-console.log(sumTwoSmallestNums(arr))
+console.log(monthsInterval(dateStart, dateEnd));
